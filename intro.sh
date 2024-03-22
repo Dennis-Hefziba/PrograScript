@@ -2,12 +2,24 @@
 read -p "Dime un numero " num1
 read -p "Dime otro numero " num2
 
-suma=$((num1+num2))
-resta=$((num1-num2))
-multiplicacion=$((num1*num2))
-division=$((num1/num2))
-echo "La suma de $num1 y $num2 es: $suma"
-echo "La resta de $num1 y $num2 es: $resta"
-echo "La division de $num1 y $num2 es: $division"
-echo "La multiplicacion de $num1 y $num2 es: $multiplicacion"
+echo "**CALCULADORA BASICA**"
+echo "MENU"
+echo "1. suma"
+echo "2. resta"
+echo "3. multi"
+echo "4. Division"
 
+read -p "Opcion " opcion
+respuesta=0
+
+if [ $opcion -eq 1 ] 
+then
+    respuesta=$((num1+num2))
+elif [ $opcion -eq 2 ]; then
+    respuesta=$((num1-num2))
+elif [ $opcion -eq 3 ]; then
+    respuesta=$((num1*num2))
+elif [ $opcion -eq 4 ]; then
+    respuesta=$((num1/num2))
+fi
+echo "La respuesta es: $respuesta"
