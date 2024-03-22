@@ -1,7 +1,6 @@
-echo "Dame tu nombre"
-read nombre
 
-echo "Cuantos anos tienes: "
-read edad
+read -p "Dime tu nombre: " nombre
+read -p "Cuantos anos tienes" edad
 
-echo "Hola que tal $nombre, tu edad es: $edad"
+echo "Hola que tal como estas: $nombre: tu edad es: $edad"
+
